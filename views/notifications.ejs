@@ -1,0 +1,44 @@
+  <!DOCTYPE HTML>
+
+<html>
+
+  <head>
+    <title>chat</title>
+		<link href="/css/materialize.min.css" type="text/css" rel="stylesheet"/>
+    <link href="/css/style.css" type="text/css" rel="stylesheet"/>
+		<script src="/js/jquery-1.11.2.min.js"></script>
+
+  	<script src="/js/materialize.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container" >
+      <div class = "jumbotron">
+
+
+				<% if (recentmsg != null) {%>
+
+					<h1>recent message : </h1>
+					<h2><%= recentmsg.message %></h2>
+
+				<% } %>
+
+				<h1> All notifications </h1>
+
+				<% for (var i = 0; i < notifications.length ; i++)
+				{%>
+   				<li><%= notifications[i].message %></li>
+				<% }
+				%>
+			</div>
+
+    </div>
+
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+  </body>
+
+</html

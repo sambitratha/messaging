@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>chat</title>
+	<link href="/css/materialize.min.css" type="text/css" rel="stylesheet"/>
+	<link href="/css/style.css" type="text/css" rel="stylesheet"/>
+	<link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+	<script src="/js/jquery-1.11.2.min.js"></script>
+
+	<script src="/js/materialize.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container" >
+		<div class = "jumbotron">
+
+				<% if (user == null) { %>
+						<h1>no user loggedin right now </h1>
+				<% } else { %>
+						<h2> welcome <%= user.username %> </h2>
+						<form action = "/show" method = "get" >
+								<button type = "submit" class = "btn btn-lg btn-info" >display notification </button>
+						</form>
+				<% } %>
+		</div>
+	</div>
+
+
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+</body>
+
+</html
