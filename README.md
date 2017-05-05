@@ -1,4 +1,4 @@
-# messaging#
+# messaging
 
 # over view
   -this app takes notifications generated via server for different users , schedules it and dispatches it at proper time
