@@ -6,7 +6,7 @@
     1. scheduler
     2. dispatcher
     
-#scheduler#
+scheduler
   - this module receives a json of notification
   - a notification consists of following attributes
     1. target user
@@ -17,14 +17,14 @@
   - delay is of 10 minutes if message has lower priority
   - then it adds the message to database with the new delay
 
-#dispatcher
+dispatcher
   - this module is a service which keeps on checking at a certain interval (10 seconds in this case)
   - it checks following thing if the user has disabled notification receiving
   - then it checks if 24 hours has passed by . if yes then it updates the database and schedules the messages for next day
   - in each 10 seconds it checks whether it's the right time to send user a message
   - it decides it from the time and delay attribute and then sends the message if it is the correct time to
   
-#frontend
+frontend
   -  you can add any number of users upon going to url /addUser
   -  then you can login annonymously by going to /login
   -  to check the scheduling /postNew provides a form for sending a new message to any of the available user
