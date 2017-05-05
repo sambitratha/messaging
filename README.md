@@ -6,7 +6,7 @@
     1. scheduler
     2. dispatcher
     
-#scheduler
+#scheduler#
   - this module receives a json of notification
   - a notification consists of following attributes
     1. target user
