@@ -10,7 +10,8 @@ var cutshort = require('./routes/cutshort.js');
 var date = new Date();
 var loggedin = false;
 var loggedUserIndex = null;
-
+var counter = 0;
+var counterarray = [];
 
 
 app.set('view engine','ejs');
@@ -47,6 +48,13 @@ app.get('/show',function(req,res){
 			if (db[loggedUserIndex].toShow){
 				db[loggedUserIndex].toShow = false;
 				msg = db[loggedUserIndex].recentmsg;
+			}
+			var date  = new Date();
+			if (date.getHours() == 0)
+			{
+
+				counterarray.push(counter);
+				counter = 1;
 			}
 			console.log(msg);
 			res.render("notifications.ejs",{recentmsg: msg , notifications : db[loggedUserIndex].revealedmsgs});
@@ -120,5 +128,6 @@ app.post('/pushNotification',urlencodedParser,function(req,res){
 app.listen(3000);
 
 module.exports = {
-		getDb : db
+		getDb : db,
+		counterarray : counterarray
 };
